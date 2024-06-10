@@ -5,7 +5,7 @@ Repositório criado para aplicação prática dos conceitos do curso "Angular: b
 ## Requisitos
 
 - NodeJs versão 12 ou posterior;
-- Angular CLI;
+- Angular CLI (11.0.0);
 
 ## Usabilidade
 
