@@ -45,11 +45,13 @@
       formControlName="userName"
     />
     <app-mensagem
-      *ngIf="
-        novoUsuarioForm.get('userName')?.errors &&
-        novoUsuarioForm.get('userName')?.touched
-      "
+      *ngIf="novoUsuarioForm.get('userName')?.errors  "
       mensagem="O Usuário deve ser em letra minúscula."
+    >
+    </app-mensagem>
+    <app-mensagem
+      *ngIf="novoUsuarioForm.get('userName')?.errors?.usuarioExistente"
+      mensagem="Usuário já existe"
     >
     </app-mensagem>
   </div>
