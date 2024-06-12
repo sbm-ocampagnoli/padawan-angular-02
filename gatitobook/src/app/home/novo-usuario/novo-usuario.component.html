@@ -45,7 +45,7 @@
       formControlName="userName"
     />
     <app-mensagem
-      *ngIf="novoUsuarioForm.get('userName')?.errors  "
+      *ngIf="novoUsuarioForm.get('userName')?.errors"
       mensagem="O Usuário deve ser em letra minúscula."
     >
     </app-mensagem>
@@ -62,6 +62,11 @@
       class="form-control"
       formControlName="password"
     />
+    <app-mensagem
+      *ngIf="novoUsuarioForm.errors?.senhaIgualUsuario"
+      mensagem="A senha deve ser diferente do usuário"
+    >
+    </app-mensagem>
   </div>
   <button class="btn btn-primary btn-block">Cadastro</button>
 </form>
