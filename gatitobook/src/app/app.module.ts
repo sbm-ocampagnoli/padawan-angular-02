@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
+import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
+import { RodapeModule } from './componentes/rodape/rodape.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CabecalhoModule,
+    RodapeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
