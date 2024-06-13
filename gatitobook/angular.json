@@ -90,8 +90,7 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/assets/img"
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -127,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "gatitobook"
+  "defaultProject": "gatitobook",
+  "cli": {
+    "analytics": "50afb22d-5820-4918-9761-06657fa805e8"
+  }
 }

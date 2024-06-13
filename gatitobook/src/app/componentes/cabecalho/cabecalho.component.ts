@@ -5,20 +5,15 @@ import { UsuarioService } from 'src/app/autenticacao/usuario/usuario.service';
 @Component({
   selector: 'app-cabecalho',
   templateUrl: './cabecalho.component.html',
-  styleUrls: ['./cabecalho.component.css']
+  styleUrls: ['./cabecalho.component.css'],
 })
-export class CabecalhoComponent implements OnInit {
-
-  constructor(private usuarioService: UsuarioService, private router: Router) { }
-
+export class CabecalhoComponent {
   user$ = this.usuarioService.retornaUsuario();
 
-  ngOnInit(): void {
-  }
+  constructor(private usuarioService: UsuarioService, private router: Router) {}
 
   logout() {
     this.usuarioService.logout();
     this.router.navigate(['']);
   }
-
 }

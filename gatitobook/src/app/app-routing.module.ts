@@ -1,4 +1,3 @@
-import { AnimaisModule } from './animais/animais.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,20 +5,21 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'home',
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((module) => module.HomeModule),
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'animais',
-    loadChildren: () => import('./animais/animais.module').then((module) => module.AnimaisModule)
+    loadChildren: () =>
+      import('./animais/animais.module').then((m) => m.AnimaisModule),
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

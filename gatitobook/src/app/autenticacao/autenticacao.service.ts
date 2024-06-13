@@ -11,7 +11,7 @@ export class AutenticacaoService {
   constructor(
     private httpClient: HttpClient,
     private usuarioService: UsuarioService
-  ) { }
+  ) {}
 
   autenticar(usuario: string, senha: string): Observable<HttpResponse<any>> {
     return this.httpClient
@@ -21,13 +21,11 @@ export class AutenticacaoService {
           userName: usuario,
           password: senha,
         },
-        {
-          observe: 'response',
-        }
+        { observe: 'response' }
       )
       .pipe(
         tap((res) => {
-          const authToken = res.headers.get('x-acess-token') ?? '';
+          const authToken = res.headers.get('x-access-token') ?? '';
           this.usuarioService.salvaToken(authToken);
         })
       );

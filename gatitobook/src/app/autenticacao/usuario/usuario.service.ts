@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from '../token.service';
-import jwt_decode from 'jwt-decode';
 import { Usuario } from './usuario';
+import jwt_decode from 'jwt-decode';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -35,6 +35,7 @@ export class UsuarioService {
     this.tokenService.excluiToken();
     this.usuarioSubject.next({});
   }
+
   estaLogado() {
     return this.tokenService.possuiToken();
   }
